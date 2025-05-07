@@ -1,0 +1,112 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
+  
+  .register-card {
+    background-color: white;
+    padding: 31px 23px;
+    width: 100%;
+    line-height: 29px;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .form-icon {
+    width: 35px;
+    margin-bottom: -4px;
+  }
+  
+  .form-header h2 {
+    font-size: 30px;
+    margin-bottom: -6px;
+    color: #111;
+  }
+  
+  .form-header p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .form-header a {
+    color: #377dff;
+    text-decoration: none;
+  }
+  
+  .Register-label {
+    display: block;
+    margin-top: 16px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  .checkbox-wrapper input {
+    margin-top: 4px;
+  }
+  
+  .checkbox-wrapper a {
+    color: #377dff;
+    text-decoration: none;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #377dff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2e6fe6;
+  }
+  
+  .inline-error {
+    color: red;
+  }
+  
