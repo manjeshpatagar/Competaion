@@ -1,0 +1,94 @@
+.about-container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #1f2937; /* Tailwind gray-800 */
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-section {
+    margin-bottom: 2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Link styles */
+  .about-social-links a {
+    color: #2563eb; /* Tailwind blue-600 */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .about-social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive typography and spacing */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 1.75rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1.125rem;
+    }
+  
+    .about-text {
+      font-size: 0.95rem;
+    }
+  
+    .about-container {
+      padding: 1.5rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 1.5rem;
+    }
+  
+    .about-subtitle {
+      font-size: 1rem;
+    }
+  
+    .about-text {
+      font-size: 0.9rem;
+    }
+  
+    .about-container {
+      padding: 1.25rem 0.75rem;
+    }
+  
+    .about-social-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .about-social-links a {
+      font-size: 0.95rem;
+    }
+  }
+  
