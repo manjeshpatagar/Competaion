@@ -1,0 +1,92 @@
+.video-page-container {
+    max-width: 500px;
+    width: 90%;
+    margin: 0px auto;
+    padding: 20px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .video-form-heading {
+    font-weight: 600;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .video-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .video-back-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    user-select: none;
+  }
+  .video-upload-box {
+    border: 2px dashed #a288f4;
+    border-radius: 12px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .video-upload-box:hover {
+    border-color: #6a4df4;
+  }
+  
+  .video-upload-placeholder {
+    text-align: center;
+    color: #a288f4;
+    font-size: 16px;
+  }
+  
+  .video-input-title,
+  .video-input-description {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a288f4;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .video-create-button {
+    width: 100%;
+    background-color: #6a4df4;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .video-create-button:hover {
+    background-color: #543de2;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .video-page-container {
+      padding: 15px;
+    }
+
+  
+    .video-create-button {
+      font-size: 15px;
+      padding: 12px;
+    }
+  }
+  
