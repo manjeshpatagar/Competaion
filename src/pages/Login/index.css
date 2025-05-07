@@ -1,0 +1,151 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin-top: 151px;
+  }
+  
+  .login-card {
+    background-color: white;
+    padding: 35px 30px;
+    width: 100%;
+    line-height: 30px;
+  }
+  
+  .login-header {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #111;
+  }
+  
+  /* Specific label styles */
+  .email-label,
+  .password-label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+  }
+  .show-password-label{
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-top: 4px;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    width: 100%;
+    margin-top: 3px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  .show-password {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #377dff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2e6fe6;
+  }
+  
+  .login-links {
+    text-align: center;
+    margin-top: 21px;
+    font-size: 13px;
+    color: #555;
+    line-height: 7px;
+  }
+  
+  .login-links a {
+    color: #377dff;
+    text-decoration: none;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 13px;
+    margin-top: 2px;
+    display: block;
+  }
+ /* Mobile (max-width: 425px) — Covers 320px, 375px, 425px */
+@media (max-width: 375px) {
+    .login-container {
+      padding: 15px;
+      flex-direction: column;
+    }
+  
+    .login-card {
+        width: 100%;
+      padding: 25px 18px;
+    }
+  
+    .login-header {
+      font-size: 22px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .login-links {
+      font-size: 12px;
+      line-height: 10px;
+    }
+  }
+  
+  /* Tablet (426px to 768px) */
+  @media (min-width: 426px) {
+    .login-container {
+      padding: 25px;
+    }
+  
+    .login-card {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 30px 28px;
+    }
+  
+    .login-header {
+      font-size: 26px;
+    }
+  }
+  
+  /* Desktop (769px and up) */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 30px;
+    }
+  
+    .login-card {
+        max-width: 100%;
+        padding: 10px 11px;
+    }
+    .login-header{
+        font-size: 20px;
+    }
+  }
+  
