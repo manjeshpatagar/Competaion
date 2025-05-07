@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-const VideoPage = () => {
+const VideoUplodePage = () => {
 
     const navigate = useNavigate();
 
@@ -51,4 +51,4 @@ const VideoPage = () => {
     );
 };
 
-export default VideoPage;
+export default VideoUplodePage;

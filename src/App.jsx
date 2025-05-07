@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './pages/Register';
-import VideoPage from './pages/VideoPage';
+import VideoUplodePage from './pages/VideoUplodePage';
 import VoterRegisterPage from './pages/VoterRegisterPage';
 import VotingSuccessPage from './pages/VotingSuccessPage';
+import CandidteProfilePage from './pages/CandidteProfilePage';
 
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Register />} />
-        <Route path="/video" element={<VideoPage />} />
+        <Route path="/videouplode" element={<VideoUplodePage />} />
         <Route path="/voterregister" element={<VoterRegisterPage />} />
         <Route path="/votingsuccess" element={<VotingSuccessPage />} />
+        <Route path="/candidteprofile" element={<CandidteProfilePage />} />
       </Routes>
     </Router>
   );
