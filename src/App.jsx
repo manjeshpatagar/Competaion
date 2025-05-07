@@ -5,6 +5,7 @@ import VideoUplodePage from './pages/VideoUplodePage';
 import VoterRegisterPage from './pages/VoterRegisterPage';
 import VotingSuccessPage from './pages/VotingSuccessPage';
 import CandidteProfilePage from './pages/CandidteProfilePage';
+import AllVideosPage from './pages/AllVideosPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/voterregister" element={<VoterRegisterPage />} />
         <Route path="/votingsuccess" element={<VotingSuccessPage />} />
         <Route path="/candidteprofile" element={<CandidteProfilePage />} />
+        <Route path="/allvideos" element={<AllVideosPage />} />
       </Routes>
     </Router>
   );

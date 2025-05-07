@@ -1,0 +1,68 @@
+
+  .candidateprofile-section-title {
+    font-size: 24px;
+    /* margin-bottom: 20px; */
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .candidateprofile-video-grid {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+  gap: 16px;
+  padding: 10px;
+  
+  }
+  .candidateprofile-allvideos-container {
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+  }
+  .candidateprofile-video-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  .candidateprofile-uploader {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  .candidateprofile-avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .candidateprofile-username {
+    font-size: 0.85rem;
+    color: gray;
+  }
+  
+  .candidateprofile-video-scroll {
+    max-height: calc(100vh - 60px); /* adjust as needed */
+    overflow-y: auto;
+  }
+  .candidateprofile-video-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+
+
+
+  
