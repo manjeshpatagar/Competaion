@@ -1,16 +1,18 @@
 .about-container {
-    max-width: 768px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    color: #1f2937; /* Tailwind gray-800 */
-    font-family: Arial, sans-serif;
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
   }
   
   .about-title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
   }
   
   .about-section {
@@ -18,15 +20,31 @@
   }
   
   .about-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
   }
   
   .about-text {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    color: #4b5563;
     margin-bottom: 0.5rem;
+  }
+  
+  .about-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #374151;
+  }
+  
+  .about-contact-item img {
+    width: 20px;
+    height: 20px;
   }
   
   .about-social-links {
@@ -35,28 +53,38 @@
     gap: 1rem;
   }
   
-  /* Link styles */
   .about-social-links a {
-    color: #2563eb; /* Tailwind blue-600 */
+    display: flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
+    color: #2563eb;
     font-weight: 500;
+    transition: color 0.2s ease;
   }
   
   .about-social-links a:hover {
     text-decoration: underline;
+    color: #1e40af;
   }
   
-  /* Responsive typography and spacing */
+  .about-social-links img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Responsive Styles */
   @media (max-width: 768px) {
     .about-title {
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
   
     .about-subtitle {
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
   
-    .about-text {
+    .about-text,
+    .about-contact-item {
       font-size: 0.95rem;
     }
   
@@ -67,24 +95,20 @@
   
   @media (max-width: 480px) {
     .about-title {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   
     .about-subtitle {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   
-    .about-text {
-      font-size: 0.9rem;
-    }
-  
-    .about-container {
-      padding: 1.25rem 0.75rem;
+    .about-contact-item {
+        flex-direction: row;
     }
   
     .about-social-links {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.75rem;
     }
   
     .about-social-links a {

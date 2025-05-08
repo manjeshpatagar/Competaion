@@ -27,18 +27,36 @@ const AboutUs = () => {
       {/* Contact */}
       <section className="about-section">
         <h2 className="about-subtitle">Contact Details</h2>
-        <p className="about-text">📧 Email: support@yourplatform.com</p>
-        <p className="about-text">📞 Phone: +1 (234) 567-8901</p>
-        <p className="about-text">📍 Address: 1234 Learning Lane, Innovation City, ED 45678</p>
+        <div className="about-contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/9068/9068642.png" alt="email" />
+          <p>support@yourplatform.com</p>
+        </div>
+        <div className="about-contact-item">
+          <img src="https://cdn-icons-png.flaticon.com/128/447/447031.png" alt="location" />
+          <p>1234 Learning Lane, Innovation City, ED 45678</p>
+        </div>
+        <div className="about-contact-item">
+          <span role="img" aria-label="phone">📞</span>
+          <p>+1 (234) 567-8901</p>
+        </div>
       </section>
 
       {/* Social Links */}
       <section className="about-section">
-        <h2 className="about-subtitle">Social Links</h2>
+        <h2 className="about-subtitle">Follow Us</h2>
         <div className="about-social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="Facebook" />
+            Facebook
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="Twitter" />
+            Twitter
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram" />
+            Instagram
+          </a>
         </div>
       </section>
     </div>

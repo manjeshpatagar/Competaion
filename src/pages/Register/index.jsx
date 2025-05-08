@@ -6,20 +6,15 @@ const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
-    email: '',
     phone: '',
-    role: 'Voter',
     password: '',
-    confirmPassword: '',
     agree: false,
   });
 
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [currentField, setCurrentField] = useState('fullName');  // Track the field being validated
+  const [currentField, setCurrentField] = useState('fullName');
 
-  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   const isLettersOnly = (text) => /^[A-Za-z\s]+$/.test(text);
   const isValidPhone = (phone) => /^[0-9]{10}$/.test(phone);
 
@@ -36,20 +31,11 @@ const Register = () => {
     e.preventDefault();
     const newErrors = {};
 
-    // Step-by-step validation
     if (currentField === 'fullName') {
       if (!formData.fullName.trim()) {
         newErrors.fullName = 'Full name is required.';
       } else if (!isLettersOnly(formData.fullName.trim())) {
         newErrors.fullName = 'Only letters allowed.';
-      }
-    }
-
-    if (currentField === 'email' && Object.keys(newErrors).length === 0) {
-      if (!formData.email.trim()) {
-        newErrors.email = 'Email is required.';
-      } else if (!isValidEmail(formData.email.trim())) {
-        newErrors.email = 'Invalid email.';
       }
     }
 
@@ -69,14 +55,6 @@ const Register = () => {
       }
     }
 
-    if (currentField === 'confirmPassword' && Object.keys(newErrors).length === 0) {
-      if (!formData.confirmPassword) {
-        newErrors.confirmPassword = 'Confirm your password.';
-      } else if (formData.password !== formData.confirmPassword) {
-        newErrors.confirmPassword = 'Passwords do not match.';
-      }
-    }
-
     if (currentField === 'agree' && Object.keys(newErrors).length === 0) {
       if (!formData.agree) {
         newErrors.agree = 'You must agree to the terms and privacy policy.';
@@ -85,25 +63,22 @@ const Register = () => {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      return; // Return early to prevent proceeding to the next field
+      return;
     }
 
-    // If all fields are valid, proceed to the next field or submit the form
     if (currentField === 'agree') {
       alert('Registration successful!');
       navigate('/login');
     } else {
-      setCurrentField(getNextField(currentField)); // Move to next field
+      setCurrentField(getNextField(currentField));
     }
   };
 
-  const getNextField = (currentField) => {
-    switch (currentField) {
-      case 'fullName': return 'email';
-      case 'email': return 'phone';
+  const getNextField = (current) => {
+    switch (current) {
+      case 'fullName': return 'phone';
       case 'phone': return 'password';
-      case 'password': return 'confirmPassword';
-      case 'confirmPassword': return 'agree';
+      case 'password': return 'agree';
       default: return 'fullName';
     }
   };
@@ -111,6 +86,9 @@ const Register = () => {
   return (
     <div className="register-container">
       <form className="register-card" onSubmit={handleSubmit}>
+        {/* Blank card added above icon */}
+        <div className="blank-card"></div>
+
         <div className="form-header">
           <img
             src="https://cdn-icons-png.flaticon.com/128/747/747968.png"
@@ -140,22 +118,6 @@ const Register = () => {
         </div>
 
         <div className="input-row">
-          <label className="Register-label">Email address</label>
-          <div className="input-with-error">
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={errors.email ? 'error' : ''}
-            />
-            {errors.email && (
-              <span className="inline-error">{errors.email}</span>
-            )}
-          </div>
-        </div>
-
-        <div className="input-row">
           <label className="Register-label">Phone Number</label>
           <div className="input-with-error">
             <input
@@ -170,16 +132,6 @@ const Register = () => {
             )}
           </div>
         </div>
-
-        <label className="Register-label">I want to register as</label>
-        <select
-          name="role"
-          value={formData.role}
-          onChange={handleChange}
-        >
-          <option value="Voter">Voter</option>
-          <option value="Candidate">Candidate</option>
-        </select>
 
         <div className="input-row">
           <label className="Register-label">Password</label>
@@ -203,32 +155,6 @@ const Register = () => {
             />
             {errors.password && (
               <span className="inline-error">{errors.password}</span>
-            )}
-          </div>
-        </div>
-
-        <div className="input-row">
-          <label className="Register-label">Confirm Password</label>
-          <div className="input-with-error password-wrapper">
-            <input
-              type={showConfirmPassword ? 'text' : 'password'}
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className={errors.confirmPassword ? 'error' : ''}
-            />
-            <img
-              src={
-                showConfirmPassword
-                  ? 'https://cdn-icons-png.flaticon.com/128/2767/2767146.png'
-                  : 'https://cdn-icons-png.flaticon.com/512/11502/11502607.png'
-              }
-              alt="Toggle Confirm Password"
-              className="eye-icon"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            />
-            {errors.confirmPassword && (
-              <span className="inline-error">{errors.confirmPassword}</span>
             )}
           </div>
         </div>
