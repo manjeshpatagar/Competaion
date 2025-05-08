@@ -97,7 +97,7 @@ const Register = () => {
             alt="App Logo"
             className="blank-card-logo"
           />
-          <span className="blank-card-name">LearnSmart Academy</span>
+          <span className="blank-card-name">singing competation</span>
         </div>
 
         <div className="form-header">
