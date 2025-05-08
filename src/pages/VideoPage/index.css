@@ -9,7 +9,7 @@
   background: white;
   width: 100%;
   height: 100%;
-  padding: 17px;
+  padding: 13px;
 }
 
 /* 1. Embedded YouTube Video */
@@ -66,10 +66,10 @@
   margin-bottom: 20px;
 }
 
-/* 5. Bottom Action Buttons */
-.video-actions {
+/* 5. Bottom Action Buttons (Updated Layout) */
+.video-actions-vertical {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   gap: 12px;
   align-items: center;
   margin-top: 10px;
@@ -88,11 +88,19 @@
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  width: 162px;
 }
 
 .action-btn:hover {
   background-color: #2f6ee5;
+}
+
+.vote-btn {
+  width: 100%;
+  font-size: 16px;
+}
+
+.share-btn {
+  font-size: 14px;
 }
 
 .icon {
@@ -135,4 +143,125 @@
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+}
+
+/* ============================== */
+/* 🚀 Leaderboard Styles Start Here */
+/* ============================== */
+
+.mainleaderboard-container {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  margin-top: 24px;
+  /* background-color: #f9f9f9; */
+  border-radius: 12px;
+}
+
+.mainleaderboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  margin-right: 222px;
+}
+
+.mainleaderboard-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mainheader-line {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+/* List Container */
+.mainleaderboard-list-wrapper {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 10px;
+  margin-bottom: 12px;
+}
+
+.mainleaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each List Item */
+.mainleaderboard-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.mainleaderboard-item:hover {
+  transform: translateY(-2px);
+}
+
+.mainleaderboard-item.highlighted {
+  border: 2px solid #007bff;
+  background-color: #e9f4ff;
+}
+
+.mainrank {
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+}
+
+.mainavatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.mainname {
+  flex: 1;
+  font-size: 16px;
+}
+
+.mainscore {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Next Button */
+.mainnext-button {
+  color: #6a4cff;
+  border: none;
+  background-color: #ffffff;
+  padding: 14px 0;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.mainnext-button:hover {
+  background: #f0f0f0;
 }

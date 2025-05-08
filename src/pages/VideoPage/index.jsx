@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import './index.css';
 
+const users = [
+  { rank: 1, name: "Pedro", score: 984, img: "https://cdn-icons-png.flaticon.com/128/2202/2202112.png", highlight: false },
+  { rank: 2, name: "Andrew", score: 945, img: "https://cdn-icons-png.flaticon.com/128/219/219970.png", highlight: true },
+  { rank: 3, name: "Freida", score: 897, img: "https://cdn-icons-png.flaticon.com/128/201/201634.png", highlight: false },
+  { rank: 4, name: "Clinton", score: 863, img: "https://cdn-icons-png.flaticon.com/128/6997/6997668.png", highlight: false },
+  { rank: 5, name: "Leif", score: 829, img: "https://cdn-icons-png.flaticon.com/128/6084/6084667.png", highlight: false },
+  { rank: 6, name: "Jamel", score: 786, img: "https://cdn-icons-png.flaticon.com/128/6997/6997551.png", highlight: false },
+  { rank: 7, name: "Tyra", score: 772, img: "https://cdn-icons-png.flaticon.com/128/6084/6084667.png", highlight: false },
+  { rank: 8, name: "Theresa", score: 755, img: "https://cdn-icons-png.flaticon.com/128/2202/2202112.png", highlight: false },
+  { rank: 9, name: "Sandra", score: 734, img: "https://cdn-icons-png.flaticon.com/128/6997/6997668.png", highlight: false },
+  { rank: 10, name: "Mike", score: 710, img: "https://cdn-icons-png.flaticon.com/128/219/219970.png", highlight: false },
+];
+
 const VideoPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [shareOpen, setShareOpen] = useState(false);
@@ -13,8 +26,7 @@ const VideoPage = () => {
   return (
     <div className="video-view-container">
       <div className="video-view-card">
-
-        {/* 1. Embedded YouTube Video */}
+        {/* Video */}
         <div className="video-player">
           <iframe
             width="100%"
@@ -27,12 +39,12 @@ const VideoPage = () => {
           ></iframe>
         </div>
 
-        {/* 2. Stats */}
+        {/* Stats */}
         <div className="video-stats">
           <span>1.2K Views</span> · <span>243 Voted</span> · <span>13 Shared</span>
         </div>
 
-        {/* 3. Candidate Info */}
+        {/* Candidate Info */}
         <div className="video-author">
           <img
             src="https://cdn-icons-png.flaticon.com/128/1999/1999625.png"
@@ -45,20 +57,17 @@ const VideoPage = () => {
           </div>
         </div>
 
-        {/* 4. Title and Description */}
+        {/* Title and Description */}
         <div className="video-header">
           <h2 className="video-title">Campaign Video: Priya Sharma</h2>
           <p className="video-description">
-            Watch a single candidate’s campaign video – glad it's working great! Let's now add the proper icons you mentioned.
-             Watch a single candidate’s campaign video – glad it's working great! Let's now add the proper icons you mentioned. 
-             Watch a single candidate’s campaign video – glad it's working great! Let's now add the proper icons you mentioned.
-             Watch a single candidate’s campaign video – glad it's working great! Let's now add the proper icons you mentioned.
+            Watch a single candidate’s campaign video. Let’s now add the proper icons you mentioned.
           </p>
         </div>
 
-        {/* 5. Bottom Action Buttons */}
+        {/* Buttons */}
         {isLoggedIn && (
-          <div className="video-actions">
+          <div className="video-actions-vertical">
             <button className="action-btn vote-btn">
               <img
                 src="https://cdn-icons-png.flaticon.com/128/5931/5931366.png"
@@ -77,16 +86,41 @@ const VideoPage = () => {
                 />
                 Share
               </button>
+
               {shareOpen && (
                 <div className="share-dropdown">
-                  <p className="share-url">{window.location.href}</p>
-                  <button className="copy-btn" onClick={handleCopyLink}>Copy Link</button>
+                  <button onClick={handleCopyLink}>Copy Link</button>
                 </div>
               )}
             </div>
           </div>
         )}
 
+        {/* Leaderboard Section */}
+        <div className="mainleaderboard-container">
+          <div className="mainleaderboard-header">
+            <h2 className="mainleaderboard-title">Scoreboard</h2>
+          </div>
+          <hr className="mainheader-line" />
+
+          <div className="mainleaderboard-list-wrapper">
+            <ul className="mainleaderboard-list">
+              {users.map((user) => (
+                <li
+                  key={user.rank}
+                  className={`mainleaderboard-item ${user.highlight ? "highlighted" : ""}`}
+                >
+                  <span className="mainrank">{user.rank}</span>
+                  <img src={user.img} alt={user.name} className="mainavatar" />
+                  <span className="mainname">{user.name}</span>
+                  <span className="mainscore">{user.score}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <button className="mainnext-button">Next</button>
+        </div>
       </div>
     </div>
   );
