@@ -62,6 +62,8 @@ const VideoPage = () => {
           <h2 className="video-title">Campaign Video: Priya Sharma</h2>
           <p className="video-description">
             Watch a single candidate’s campaign video. Let’s now add the proper icons you mentioned.
+            Watch a single candidate’s campaign video. Let’s now add the proper icons you mentioned.
+            Watch a single candidate’s campaign video. Let’s now add the proper icons you mentioned.
           </p>
         </div>
 
@@ -89,8 +91,9 @@ const VideoPage = () => {
 
               {shareOpen && (
                 <div className="share-dropdown">
-                  <button onClick={handleCopyLink}>Copy Link</button>
-                </div>
+                <p className="share-url">{window.location.href}</p>
+                <button className="copy-btn" onClick={handleCopyLink}>Copy Link</button>
+              </div>
               )}
             </div>
           </div>
@@ -119,7 +122,7 @@ const VideoPage = () => {
             </ul>
           </div>
 
-          <button className="mainnext-button">Next</button>
+          <button className="mainnext-button">See more</button>
         </div>
       </div>
     </div>
