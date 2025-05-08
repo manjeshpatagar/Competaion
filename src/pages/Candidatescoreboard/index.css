@@ -1,0 +1,161 @@
+.scoreboard-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #6c4eff, #a88bff);
+  color: white;
+  overflow: hidden;
+}
+
+.top-section {
+  padding: 16px 0 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.scoreboard-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* Podium Layout */
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.podium-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.podium-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 8px;
+}
+
+.podium-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.podium-score {
+  background: white;
+  color: #6c4eff;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.podium-block {
+  width: 60px;
+  background: white;
+  color: #6c4eff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 6px;
+}
+
+.first .podium-block {
+  height: 100px;
+}
+
+.second .podium-block {
+  height: 70px;
+}
+
+.third .podium-block {
+  height: 60px;
+}
+
+/* Candidate List */
+.candidate-list {
+  /* background: #fff; */
+  flex: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 16px;
+  overflow-y: auto;
+  color: #333;
+}
+
+.candidate-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.candidate-list li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #f6f6f6;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.candidate-list li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.rank {
+  font-weight: bold;
+  width: 30px;
+  text-align: center;
+  color: #6c4eff;
+}
+
+.name {
+  flex: 1;
+  font-size: 16px;
+}
+
+.score {
+  font-weight: bold;
+}
+
+/* Footer Buttons */
+/* .footer-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 16px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .btn {
+    flex: 1;
+    margin: 0 8px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 999px;
+    background: #eee;
+    color: #6c4eff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #ddd;
+  } */
