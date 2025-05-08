@@ -34,7 +34,7 @@ const VoterRegisterPage = () => {
 
   return (
     <div className="voter-register-container">
-      <h2 className="voter-title">Register Voting Page</h2>
+      <h2 className="voter-title">Register for Voting</h2>
 
       <div className="voter-form-group">
         <input

@@ -10,7 +10,7 @@ import {
 
 const CandidteProfilePage = () => {
     const [showShareOptions, setShowShareOptions] = useState(false);
-    const videoUrl = "https://www.w3schools.com/html/mov_bbb.mp4";
+    const profileShareUrl = "https://example.com/andrew_ainsley"; // Replace with actual profile URL
 
     const handleShareClick = () => {
         setShowShareOptions(!showShareOptions);
@@ -24,7 +24,6 @@ const CandidteProfilePage = () => {
                     <div className="candidateprofile-logo">Q</div>
                     <div className="candidateprofile-title">Profile</div>
                 </div>
-
                 <div className="candidateprofile-icons">
                     <div>
                         <Share2 onClick={handleShareClick} />
@@ -33,14 +32,6 @@ const CandidteProfilePage = () => {
                         <BarChart2 />
                     </div>
                 </div>
-            </div>
-
-            {/* Video Section */}
-            <div className="candidateprofile-video">
-                <video controls width="100%">
-                    <source src={videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
             </div>
 
             {/* Profile Info */}
@@ -56,8 +47,16 @@ const CandidteProfilePage = () => {
                         <div>@andrew_ainsley</div>
                     </div>
                 </div>
-                <div><button className="candidateprofile-editbtn">Edit Profile</button></div>
+                <div>
+                    <button className="candidateprofile-editbtn">Edit Profile</button>
+                </div>
+            </div>
 
+            {/* Additional Profile Details (Optional) */}
+            <div className="candidateprofile-bio">
+                <p><strong>Bio:</strong> Passionate community leader working towards change.</p>
+                <p><strong>Location:</strong> Kumta, Karnataka</p>
+                <p><strong>Email:</strong> andrew@example.com</p>
             </div>
 
             {/* Share Modal */}
@@ -68,33 +67,33 @@ const CandidteProfilePage = () => {
                 >
                     <div
                         className="candidateprofile-sharemodal"
-                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+                        onClick={(e) => e.stopPropagation()}
                     >
-                        <p style={{textAlign:"center", fontSize:"20px"}}>Share</p>
+                        <p style={{ textAlign: "center", fontSize: "20px" }}>Share</p>
                         <div className="candidateprofile-share-icons">
                             <a
-                                href={`https://wa.me/?text=${encodeURIComponent(videoUrl)}`}
+                                href={`https://wa.me/?text=${encodeURIComponent(profileShareUrl)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <FaWhatsapp /> WhatsApp
                             </a>
                             <a
-                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(videoUrl)}`}
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(profileShareUrl)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <FaFacebook /> Facebook
                             </a>
                             <a
-                                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(videoUrl)}`}
+                                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(profileShareUrl)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <FaTwitter /> Twitter
                             </a>
                             <a
-                                href={`https://t.me/share/url?url=${encodeURIComponent(videoUrl)}`}
+                                href={`https://t.me/share/url?url=${encodeURIComponent(profileShareUrl)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -104,7 +103,6 @@ const CandidteProfilePage = () => {
                     </div>
                 </div>
             )}
-
         </div>
     );
 };

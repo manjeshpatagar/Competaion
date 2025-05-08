@@ -7,6 +7,7 @@ import VotingSuccessPage from './pages/VotingSuccessPage';
 import CandidteProfilePage from './pages/CandidteProfilePage';
 import AllVideosPage from './pages/AllVideosPage';
 import CampaningDetailsPage from './pages/CampaningDetailsPage';
+import Map from './pages/MapPage';
 
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
         <Route path="/candidteprofile" element={<CandidteProfilePage />} />
         <Route path="/allvideos" element={<AllVideosPage />} />
         <Route path="/campaningdetails" element={<CampaningDetailsPage />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
     </Router>
   );
-}
+} 
 
 export default App;
