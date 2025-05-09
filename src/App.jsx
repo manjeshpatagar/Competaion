@@ -6,7 +6,7 @@ import VideoPage from './pages/VideoPage'
 import Leaderboard from './pages/Leaderboard';
 import Candidatescoreboard from './pages/Candidatescoreboard'
 import AboutUs from './pages/AboutUS'
-
+import Videoupload from './pages/Videoupload'
 
 function App() {  
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/videopage" element={<VideoPage />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/candidatescoreboard" element={<Candidatescoreboard />} />
+        <Route path="/videoupload" element={<Videoupload />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
     </Router>
