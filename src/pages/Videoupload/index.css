@@ -1,11 +1,11 @@
 .video-upload-container {
     padding: 16px;
-    font-family: 'Arial', sans-serif;
     color: #333;
     display: flex;
     flex-direction: column;
     height: 100vh;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
   }
   .video-preview {
     border-radius: 12px;

@@ -55,7 +55,7 @@ const VideoUpload = () => {
               alt="Upload Icon"
               className="upload-icon-image"
             />
-            <p className="upload-text">Video</p>
+            <p className="upload-text">Add Video</p>
           </>
         )}
         <input
